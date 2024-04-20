@@ -6,11 +6,8 @@ import guru.springframework.spring6webapp.domain.Publisher;
 import guru.springframework.spring6webapp.repositories.AuthorRepository;
 import guru.springframework.spring6webapp.repositories.BookRepository;
 import guru.springframework.spring6webapp.repositories.PublisherRepository;
-import jakarta.persistence.ManyToOne;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.Set;
 
 @Component
 public class BootstrapData implements CommandLineRunner {
@@ -54,6 +51,7 @@ public class BootstrapData implements CommandLineRunner {
         rodSaved.getBooks().add(noEJBSaved);
         dddSaved.getAuthors().add(ericSaved);
         noEJBSaved.getAuthors().add(rodSaved);
+
 
         Publisher publisher = new Publisher();
         publisher.setPublisherName("My Publisher");

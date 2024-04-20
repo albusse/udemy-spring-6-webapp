@@ -2,7 +2,6 @@ package guru.springframework.spring6webapp.domain;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -12,6 +11,7 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String publisherName;
     private String address;
     private String city;
